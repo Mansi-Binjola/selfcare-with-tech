@@ -1,0 +1,25 @@
+@font-face {
+    font-family:"Bantayog-Regular" ;
+    src: url(fonts/Bantayog-Regular.woff) format("woff");
+}
+h1 {
+    font-family: "Bantayog-Regular" !important;
+    font-size: 60px;
+    color:#545454;
+    text-align: center;
+    letter-spacing: 2px;
+}
+img{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+h3 {
+    font-family: "Bantayog-Regular" !important;
+    font-size: 50px;
+    color:#545454;
+    text-align: center;
+}
+body{
+    background-color: #f7fbff;
+}
