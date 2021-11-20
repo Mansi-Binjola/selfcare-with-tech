@@ -1,140 +1,234 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>self-care | home</title>
-    <!--bootstrap 5-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <style>
-      @font-face {
-    font-family:"Bantayog-Regular" ;
-    src: url(css/fonts/Bantayog-Regular.woff) format("woff");
-}
-body{
-  background-color: #fff9e8;
-}
-h2{
-  font-family: "Bantayog-Regular";
-  color: #454545;
-  font-size: 50px;
-  padding: 60px;
-}
-#buttonD{
-  color:black;
-  text-align: justify;
-  left: auto;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>self-care | home</title>
+  <!--bootstrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <style>
+    @font-face {
+      font-family: "Bantayog-Regular";
+      src: url(css/fonts/Bantayog-Regular.woff) format("woff");
+    }
 
-      .nav{
-        background-color:#ffd6bd;
-        color: grey;
-        font-size: 20px;
-        font-family: "Bantayog-Regular";
+    body {
+      background-color: #fff9e8;
+    }
+
+    h2 {
+      font-family: "Bantayog-Regular";
+      color: #454545;
+      font-size: 50px;
+      padding: 60px;
+    }
+
+    #buttonD {
+      color: black;
+      text-align: justify;
+      left: auto;
+    }
+
+    .nav {
+      background-color: #ffd6bd;
+      color: grey;
+      font-size: 30px;
+      font-family: "Bantayog-Regular";
+    }
+
+    h1 {
+      font-family: "Bantayog-Regular" !important;
+      font-size: 100px;
+      color: #545454;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    .take-break-button {
+      align-items: center;
+      width: 250px;
+      font-family: "Bantayog-Regular";
+      background-color: #ffd6bd;
+      border: 2px solid #111;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #454545;
+      cursor: pointer;
+      display: flex;
+      font-size: 26px;
+      height: 100px;
+      justify-content: center;
+      line-height: 24px;
+      max-width: 100%;
+      padding: 0 25px;
+      position: absolute;
+      bottom: 100px;
+      left: 200px;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .take-break-button:after {
+      background-color: #454545;
+      border-radius: 8px;
+      content: "";
+      display: block;
+      height: 100px;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      top: -2px;
+      transform: translate(8px, 8px);
+      transition: transform .2s ease-out;
+      z-index: -1;
+    }
+
+    .take-break-button:hover:after {
+      transform: translate(0, 0);
+    }
+
+    .take-break-button:active {
+      background-color: #ffd6bd;
+      outline: 0;
+    }
+
+    .take-break-button:hover {
+      outline: 0;
+    }
+
+    @media (min-width: 768px) {
+      .take-break-button {
+        padding: 0 40px;
       }
-      button{
-        color: grey;
-      }
-      h1 {
-    font-family: "Bantayog-Regular" !important;
-    font-size: 100px;
-    color:#545454;
-    text-align: center;
-    letter-spacing: 2px;
-} .take-break-button {
-  align-items: center;
-  width:250px;
-  font-family: "Bantayog-Regular";
-  background-color: #ffd6bd;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #454545;
-  cursor: pointer;
-  display: flex;
-  font-size: 26px;
-  height: 100px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: absolute;
-  bottom: 100px;
-  left: 200px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
+    }
 
-.take-break-button:after {
-  background-color: #454545;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 100px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
-}
+    .nav-link {
+      color: #454545;
+      /*add border*/
 
-.take-break-button:hover:after {
-  transform: translate(0, 0);
-}
+    }
 
-.take-break-button:active {
-  background-color: #ffd6bd;
-  outline: 0;
-}
+    .nav-link:hover {
+      color: #454545;
+    }
 
-.take-break-button:hover {
-  outline: 0;
-}
+    .nav-link:active {
+      background-color: #fff9e8;
+    }
 
-@media (min-width: 768px) {
-  .take-break-button {
-    padding: 0 40px;
-  }
-}
+    button {
+      font-family: "Bantayog-Regular";
+    }
 
-    </style>
-  </head>
+    .flip-container {
+      perspective: 1000px;
+    }
+
+    .img-flip {
+
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .img-flip.flipCard {
+
+      transform: rotateY(-180deg);
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .back {
+      transform: rotateY(-180deg);
+    }
+  </style>
+</head>
+
 <body>
   <!--scrollpy bootstrap-->
   <ul class="nav nav-tabs p-3" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+    <li class="nav-item" role="">
+      <button class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+        aria-controls="home" aria-selected="true">Home</button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false">about</button>
+    <li class="nav-item" role="">
+      <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab"
+        aria-controls="about" aria-selected="false">about</button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="false">blog</button>
+    <li class="nav-item" role="">
+      <button class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab"
+        aria-controls="blog" aria-selected="false">blog</button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="book-tab" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab" aria-controls="book" aria-selected="false">book</button>
+    <li class="nav-item" role="">
+      <button class="nav-link active" id="book-tab" data-bs-toggle="tab" data-bs-target="#book" type="button" role="tab"
+        aria-controls="book" aria-selected="false">book</button>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
       <h1 class="m-3 p-5">SELF-CARE WITH TECH</h1>
       <!-- HTML !-->
       <h2>Self-caring about your mental health is important. </h2>
-      <div  class="m-5">
-      <h2 id="buttonD">Take the 5-minute break today.</h2>
-<button class="take-break-button m-5" onclick="location.href='self-care.html'" role="button">TAKE <br> BREAK</button>
-</div>      
-<img src="assets/self-care-elements.png" style="width:600px;position: absolute;right: 0;bottom: 0;" alt="">
+      <div class="m-5">
+        <h2 id="buttonD">Take the 5-minute break today.</h2>
+        <button class="take-break-button m-5" onclick="location.href='self-care.html'" role="button">TAKE <br>
+          BREAK</button>
+      </div>
+      <img src="assets/self-care-elements.png" style="width:600px;position: absolute;right: 0;bottom: 0;" alt="">
     </div>
-    <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">...</div>
-    <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">...</div>
-    <div class="tab-pane fade" id="book" role="tabpanel" aria-labelledby="book-tab">...</div>
+    <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">about</div>
+    <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">blog</div>
+    <div class="tab-pane fade show active" id="book" role="tabpanel" aria-labelledby="book-tab">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col m-5 ">
+          <div class="flip-container">
+
+            <div class="img-flip">
+
+              <div class="front">
+                <img style="width: 100%;height: auto; " src="assets/books-img/front.jpg" alt="">
+              </div>
+              <div class="back">
+                <img style="width: 100%;height: auto; " src="assets/books-img/back.jpg" alt="">
+                <button
+                  style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;">info</button>
+                <button style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;">buy
+                  book</button>
+
+              </div>
+            </div>
+          </div>
+          <!--
+            <button style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;">buy
+              book</button>
+            -->
+        </div>
+        
+        <script>
+          var card = document.querySelector('.img-flip');
+          card.addEventListener('click', function () {
+            this.classList.toggle('flipCard');
+          });
+
+        </script>
+
+      </div>
+    </div>
   </div>
 </body>
+
 </html>
