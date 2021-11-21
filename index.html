@@ -155,6 +155,17 @@
     .back {
       transform: rotateY(-180deg);
     }
+    .yoga{
+      -webkit-animation: rotateY 2s infinite linear;
+  animation: rotateY 2s infinite linear;
+}
+@-webkit-keyframes rotateY {
+  to { -webkit-transform: rotateY(360deg); }
+}
+@keyframes rotateY {
+  to { transform: rotateY(360deg); }
+}
+
   </style>
 </head>
 
@@ -162,24 +173,24 @@
   <!--scrollpy bootstrap-->
   <ul class="nav nav-tabs p-3" id="myTab" role="tablist">
     <li class="nav-item" role="">
-      <button class="nav-link " id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
-        aria-controls="home" aria-selected="true">Home</button>
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
+        aria-controls="home" aria-selected="true" onclick="hideDoodle()">Home</button>
     </li>
     <li class="nav-item" role="">
       <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab"
-        aria-controls="about" aria-selected="false">about</button>
+        aria-controls="about" aria-selected="false" onclick="hideDoodle()">about</button>
     </li>
     <li class="nav-item" role="">
       <button class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab"
-        aria-controls="blog" aria-selected="false">blog</button>
+        aria-controls="blog" aria-selected="false" onclick="hideDoodle()">blog</button>
     </li>
     <li class="nav-item" role="">
-      <button class="nav-link active" id="book-tab" data-bs-toggle="tab" data-bs-target="#book" type="button" role="tab"
-        aria-controls="book" aria-selected="false">book</button>
+      <button class="nav-link " id="book-tab" data-bs-toggle="tab" data-bs-target="#book" type="button" role="tab"
+        aria-controls="book" aria-selected="false" onclick="showDoodle()">book</button>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
       <h1 class="m-3 p-5">SELF-CARE WITH TECH</h1>
       <!-- HTML !-->
       <h2>Self-caring about your mental health is important. </h2>
@@ -188,11 +199,44 @@
         <button class="take-break-button m-5" onclick="location.href='self-care.html'" role="button">TAKE <br>
           BREAK</button>
       </div>
-      <img src="assets/self-care-elements.png" style="width:600px;position: absolute;right: 0;bottom: 0;" alt="">
+      <img  class="yoga" src="assets/self-care-elements.png" style="width:600px;position: absolute;right: 0;bottom: 0;" alt="">
     </div>
-    <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">about</div>
+    <div class="tab-pane fade " id="about" role="tabpanel" aria-labelledby="about-tab">
+      <div class="row text-center m-2">
+        <h2 style="font-size: 60px;">WHY NEED OF THIS WEBSITE?</h2>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2">
+        <div class="col">
+          <img class="yoga" src="assets/yoga.png" style="bottom: 0; width: 100%; height:auto;" alt="">
+        </div>
+        <div class="col">
+            <p style="font-size: 30px; font-family: 'Bantayog-Regular'; color: #454545;">
+              In our busy schedule of working, taking a break is a necessary step for a healthy mind. This website is
+              created so that you can take that <span style="color: #ca3078;">five-minute break</span> by doing any
+              of the following:-
+            </p>
+            <ul style="font-family:'Bantayog-Regular'; color: #454545; font-size: 30px;">
+              <li>listening to any of one soothing music</li>
+              <li>reading a blog</li>
+              <li>finding a good book</li>
+            </ul>
+        </div>
+        <div class="col">
+          <img src="assets/hearts.gif" alt="" style="width: 100%;height: auto;right: 0; bottom: 0;">
+        </div>
+      </div>
+    </div>
     <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">blog</div>
-    <div class="tab-pane fade show active" id="book" role="tabpanel" aria-labelledby="book-tab">
+    <div class="tab-pane fade " id="book" role="tabpanel" aria-labelledby="book-tab">
+      <script>
+        function showDoodle() {
+          document.body.style.backgroundImage = "url('assets/book-doodle.png')";
+        }
+        function hideDoodle() {
+          document.body.style.backgroundImage = "none";
+        }
+        
+      </script>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div class="col m-5 ">
           <div class="flip-container">
@@ -217,7 +261,7 @@
               book</button>
             -->
         </div>
-        
+
         <script>
           var card = document.querySelector('.img-flip');
           card.addEventListener('click', function () {
