@@ -11,6 +11,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
   <style>
     @font-face {
       font-family: "Bantayog-Regular";
@@ -182,13 +186,27 @@
     </li>
     <li class="nav-item" role="">
       <button class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" type="button" role="tab"
-        aria-controls="blog" aria-selected="false" onclick="hideDoodle()">blog</button>
+        aria-controls="blog" aria-selected="false" onclick="showDoodleBlog()">blog</button>
     </li>
     <li class="nav-item" role="">
       <button class="nav-link " id="book-tab" data-bs-toggle="tab" data-bs-target="#book" type="button" role="tab"
-        aria-controls="book" aria-selected="false" onclick="showDoodle()">book</button>
+        aria-controls="book" aria-selected="false" onclick="showDoodleBook()">book</button>
     </li>
   </ul>
+  <script>
+    function showDoodleBook() {
+      document.body.style.backgroundImage = "url('assets/book-doodle.png')";
+      document.body.style.backgroundSize = "cover";
+    }
+    function showDoodleBlog() {
+      document.body.style.backgroundImage = "url('assets/blog-doodle.png')";
+    }
+    
+    function hideDoodle() {
+      document.body.style.backgroundImage = "none";
+    }
+    
+  </script>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
       <h1 class="m-3 p-5">SELF-CARE WITH TECH</h1>
@@ -226,20 +244,43 @@
         </div>
       </div>
     </div>
-    <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">blog</div>
+    <div class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">
+      <h2 class="text-center"style="font-size: 80px;">COMING SOON</h2>
+    </div>
     <div class="tab-pane fade " id="book" role="tabpanel" aria-labelledby="book-tab">
-      <script>
-        function showDoodle() {
-          document.body.style.backgroundImage = "url('assets/book-doodle.png')";
-        }
-        function hideDoodle() {
-          document.body.style.backgroundImage = "none";
-        }
+      
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 m-2 g-4">
+        <!--<script  >
+          let card = document.querySelector(".row");
+$.getJSON( "ajax/test.json", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+});
+          /*
+            <div class="card" style="width: 18rem;">
+            <img src="assets/books-img/1.jpeg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Everyday Self-Care: The Little Book that Helps You to Take Care of YOU.</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        */
+        </script>
         
-      </script>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-        <div class="col m-5 ">
-          <div class="flip-container">
+      -->
+        <!-- <div class="col m-5 ">
+          flip card -->
+          <!--
+            <div class="flip-container">
 
             <div class="img-flip">
 
@@ -255,21 +296,83 @@
 
               </div>
             </div>
-          </div>
+          </div>-->
           <!--
             <button style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;">buy
               book</button>
             -->
-        </div>
-
-        <script>
+        <!--<script>
           var card = document.querySelector('.img-flip');
           card.addEventListener('click', function () {
             this.classList.toggle('flipCard');
           });
 
         </script>
-
+      -->
+      <div class="col p-3 text-center">
+        <div class="card data h-100" >
+          <img src="assets/books-img/1.jpeg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Everyday Self-Care: The Little Book that Helps You to Take Care of YOU.</h5>
+            <p class="card-text">CICO Books</p>
+              <button
+              style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.goodreads.com/book/show/52757232-everyday-self-care'">info</button>
+            <button style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.amazon.in/Everyday-Self-Care-little-book-helps/dp/1782498877'">buy
+              book</button>
+          </div>
+      </div>
+      </div>
+      <div class="col p-3 text-center">
+        <div class="card data h-100" >
+          <img src="assets/books-img/2.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Little Book of Self-care: 30 Practices to Soothe the Body, Mind and Soul.</h5>
+            <p class="card-text">Suzy Reading</p>
+              <button
+              style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.goodreads.com/book/show/42789284-the-little-book-of-self-care'">info</button>
+            <button style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.amazon.in/Little-Book-Self-care-practices-soothe/dp/1783253053'">buy
+              book</button>
+          </div>
+      </div>
+      </div>
+      <div class="col p-3 text-center">
+        <div class="card data h-100" >
+          <img src="assets/books-img/3.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Ikigai: The Japanese Secret to a Long and Happy Life.</h5>
+            <p class="card-text">Héctor García</p>
+              <button
+              style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.goodreads.com/en/book/show/40534545-ikigai'">info</button>
+            <button style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.amazon.in/Ikigai-H%C3%A9ctor-Garc%C3%ADa/dp/178633089X'">buy
+              book</button>
+          </div>
+      </div>
+      </div>
+      <div class="col p-3 text-center">
+        <div class="card data h-100" >
+          <img src="assets/books-img/4.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Little Book of Self-Care: 200 Ways to Refresh, Restore, and Rejuvenate.</h5>
+            <p class="card-text">Adams Media</p>
+              <button
+              style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.goodreads.com/en/book/show/34623110-the-little-book-of-self-care'">info</button>
+            <button style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.amazon.in/Little-Book-Self-Care-Refresh-Rejuvenate/dp/1507204914'">buy
+              book</button>
+          </div>
+      </div>
+      </div>
+      <div class="col p-3 text-center">
+        <div class="card data h-100" >
+          <img src="assets/books-img/5.jpg" class="card-img-top " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Book of Self-Care: Remedies for Healing Mind, Body, and Soul.</h5>
+            <p class="card-text">Mary Beth Janssen</p>
+              <button
+              style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.goodreads.com/en/book/show/34850782-the-book-of-self-care'">info</button>
+            <button style="background-color: antiquewhite;border-radius: 10px; margin-top:15px; padding: 10px;" onclick="location.href='https://www.amazon.in/Book-Self-Care-Remedies-Healing-Mind-ebook/dp/B075G9PDYC'">buy
+              book</button>
+          </div>
+      </div>
       </div>
     </div>
   </div>
