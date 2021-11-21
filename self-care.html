@@ -11,6 +11,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        img{
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,16 +46,20 @@
     </div>
     <script>
         var curPlaying;
+        var color =["#d1edf0","#cae3c6","#d1edf0","#d5c4b0"];
         function playRelaxsong(song) {
             // console.log(curPlaying);
             let audio = document.getElementById("audio" + song);
             if (audio.paused) {
                 audio.play();
+                document.body.style.backgroundColor = color[parseInt(song)-1];
+                console.log(color[parseInt(song)-1]);
                 if (curPlaying) {
                     document.getElementById("audio" + curPlaying).pause();
                 }
             } else {
                 audio.pause();
+                document.body.style.backgroundColor = "#f7fbff";
             }
             curPlaying = song;
         }
