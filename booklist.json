@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Everyday Self-Care: The Little Book that Helps You to Take Care of YOU.",
+        "Author":"CICO Books",
+        "info-link":"https://www.goodreads.com/book/show/52757232-everyday-self-care",
+        "buy-link":"https://www.amazon.in/Everyday-Self-Care-little-book-helps/dp/1782498877",
+        "image":"assets/books-img/1.jpeg"
+    },
+    {
+        
+        "title": "The Little Book of Self-care: 30 Practices to Soothe the Body, Mind and Soul",
+        "Author":"Suzy Reading",
+        "info-link":"https://www.goodreads.com/book/show/42789284-the-little-book-of-self-care",
+        "buy-link":"https://www.amazon.in/Little-Book-Self-care-practices-soothe/dp/1783253053",
+        "image":"assets/books-img/2.jpg"
+    },
+    {
+        "title": "The Book of Self-Care: Remedies for Healing Mind, Body, and Soul",
+        "Author":"Mary Beth Janssen",
+        "info-link":"https://www.goodreads.com/en/book/show/34850782-the-book-of-self-care",
+        "buy-link":"https://www.amazon.in/Book-Self-Care-Remedies-Healing-Mind-ebook/dp/B075G9PDYC",
+        "image":"assets/books-img/5.jpg"
+    },
+    {
+        "title": "The Little Book of Self-Care: 200 Ways to Refresh, Restore, and Rejuvenate",
+        "Author":"Adams Media",
+        "info-link":"https://www.goodreads.com/en/book/show/34623110-the-little-book-of-self-care",
+        "buy-link":"https://www.amazon.in/Little-Book-Self-Care-Refresh-Rejuvenate/dp/1507204914",
+        "image":"assets/books-img/4.jpg"
+    },
+    {
+        "title": "Ikigai: The Japanese Secret to a Long and Happy Life",
+        "Author":"Héctor García",
+        "info-link":"https://www.goodreads.com/en/book/show/40534545-ikigai",
+        "buy-link":"https://www.amazon.in/Ikigai-H%C3%A9ctor-Garc%C3%ADa/dp/178633089X",
+        "image":"assets/books-img/3.jpg"
+    }
+]
